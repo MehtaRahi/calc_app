@@ -7,6 +7,7 @@ def main():
     1. Add
     2. Subtract
     3. Multiply
+    4.Division
  
     """)
     choice = input("Enter your choice (1/2/3): ")
@@ -19,10 +20,13 @@ def main():
         a = float(input("Enter the first number: "))
         b = float(input("Enter the second number: "))
         print(f"The result is: {subtract(a, b)}")
-    elif choice == "3":
+    elif choice == "4":
         a = float(input("Enter the first number: "))
         b = float(input("Enter the second number: "))
-        print(f"The result is: {multiply(a, b)}")
+        try:
+            print(f"The result is: {divide(a, b)}")
+        except ValueError as e:
+            print(f"Error: {e}")
     else:
         print("Invalid choice.")
  
